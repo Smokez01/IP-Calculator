@@ -1,4 +1,4 @@
-# Elmo
+# IP Calculator
 
 ![Clean & Simple Design](assets/gifs/readme.gif)
 
