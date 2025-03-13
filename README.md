@@ -1,6 +1,6 @@
 # IP Calculator
 
-![Clean & Simple Design](assets/gifs/readme.gif)
+![Clean & Simple Design](showcase.png)
 
 ## Getting Started
 
