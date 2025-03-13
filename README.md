@@ -1,4 +1,4 @@
-# IP Calculator
+# IP calculator
 
 ![Clean & Simple Design](showcase.png)
 
