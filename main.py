@@ -5,7 +5,7 @@ import ipaddress
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
-def calculate():
+def calculate(event=None):
     ip_input = ip_entry.get().strip()
     subnet_input = subnet_entry.get().strip()
     if not ip_input or not subnet_input:
@@ -47,11 +47,15 @@ ip_label = ctk.CTkLabel(frame, text="IP Address:", font=("Helvetica", 12))
 ip_label.pack(pady=(10, 5))
 ip_entry = ctk.CTkEntry(frame, width=250, font=("Helvetica", 12), placeholder_text="192.168.1.1")
 ip_entry.pack(pady=(0, 10))
+# Bind Enter-Taste im IP-Eingabefeld
+ip_entry.bind("<Return>", calculate)
 
 subnet_label = ctk.CTkLabel(frame, text="Subnet (e.g., 24 or 255.255.255.0):", font=("Helvetica", 12))
 subnet_label.pack(pady=(10, 5))
 subnet_entry = ctk.CTkEntry(frame, width=250, font=("Helvetica", 12), placeholder_text="24 or 255.255.255.0")
 subnet_entry.pack(pady=(0, 10))
+# Bind Enter-Taste im Subnetz-Eingabefeld
+subnet_entry.bind("<Return>", calculate)
 
 calc_button = ctk.CTkButton(frame, text="Calculate", font=("Helvetica", 12), command=calculate)
 calc_button.pack(pady=(10, 10))
